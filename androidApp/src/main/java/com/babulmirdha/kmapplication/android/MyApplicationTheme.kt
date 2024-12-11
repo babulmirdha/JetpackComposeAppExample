@@ -53,3 +53,13 @@ fun MyApplicationTheme(
         content = content
     )
 }
+
+
+@Composable
+fun ComposeTutorialTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+)
+{
+
+}

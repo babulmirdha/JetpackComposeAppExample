@@ -27,58 +27,21 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApplicationTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-//                    GreetingView(Greeting().greet())
-
-                    MessageCard(Message("Babul", "This is Babul's message"))
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun GreetingView(text: String) {
-    Text(text = text)
-}
-
-data class Message(val author: String, val body: String)
-
-@Composable
-fun MessageCard(msg: Message) {
-
-    Row(modifier = Modifier.padding(all = 8.dp)) {
-        Image(
-            painterResource(R.drawable.bm), "This is babul",
-            modifier = Modifier.size(64.dp)
-                .clip(CircleShape)
-        )
-        Spacer(modifier = Modifier.width(8.dp))
-        Column {
-            Text(text = msg.author)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = msg.body)
+            MessageCard("Android")
         }
     }
 
-
-
-}
-
-@Preview
-@Composable
-fun PreviewMessageCard() {
-    MessageCard(Message("Babul", "MyText"))
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    MyApplicationTheme {
-        GreetingView("Hello, Android!")
+    @Composable
+    fun MessageCard(name: String) {
+        Text(text = "Hello $name!")
     }
+
+
+    @Preview
+    @Composable
+    fun PreviewMessageCard() {
+        MessageCard("Android")
+    }
+
+
 }

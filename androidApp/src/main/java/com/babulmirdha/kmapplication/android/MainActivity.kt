@@ -40,7 +40,6 @@ class MainActivity : ComponentActivity() {
 }
 
 
-
 data class Message(val author: String, val body: String)
 
 @Composable
@@ -49,7 +48,8 @@ fun MessageCard(msg: Message) {
     Row(modifier = Modifier.padding(all = 8.dp)) {
         Image(
             painterResource(R.drawable.bm), "This is babul",
-            modifier = Modifier.size(64.dp)
+            modifier = Modifier
+                .size(64.dp)
                 .clip(CircleShape)
         )
         Spacer(modifier = Modifier.width(8.dp))
@@ -59,7 +59,6 @@ fun MessageCard(msg: Message) {
             Text(text = msg.body)
         }
     }
-
 
 
 }

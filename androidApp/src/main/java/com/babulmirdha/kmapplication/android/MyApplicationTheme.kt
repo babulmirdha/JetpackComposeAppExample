@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun MyApplicationTheme(
+fun ComposeTutorialTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
@@ -55,11 +55,3 @@ fun MyApplicationTheme(
 }
 
 
-@Composable
-fun ComposeTutorialTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
-)
-{
-
-}

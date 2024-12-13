@@ -32,8 +32,6 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-//                    GreetingView(Greeting().greet())
-
                     MessageCard(Message("Babul", "This is Babul's message"))
                 }
             }
@@ -41,10 +39,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun GreetingView(text: String) {
-    Text(text = text)
-}
+
 
 data class Message(val author: String, val body: String)
 
@@ -73,12 +68,4 @@ fun MessageCard(msg: Message) {
 @Composable
 fun PreviewMessageCard() {
     MessageCard(Message("Babul", "MyText"))
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    MyApplicationTheme {
-        GreetingView("Hello, Android!")
-    }
 }
